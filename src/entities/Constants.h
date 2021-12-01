@@ -14,8 +14,8 @@
 #define KEY_SPACE ' '
 
 //PERSONAGEM
-float personX = 300;
-float personY = 350;
+float personX = 10;
+float personY = 10;
 float personHorizontal = 50;
 float personVertical = 30;
 

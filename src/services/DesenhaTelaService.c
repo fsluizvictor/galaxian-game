@@ -1,17 +1,17 @@
 #include <GL/glew.h>     // glew.h deve vir antes
 #include <GL/freeglut.h> // do freeglut.h
 
+#include "../entities/Constants.h"
+
 void drawPerson()
 {
     glColor3f(0, 1, 0);
 
-    // desenha um POLYGON por seus vértices
     glBegin(GL_POLYGON);
-    // NOVIDADE: antes os valores eram -0.5, 0.5
-    glVertex3f(20, 20, 0);
-    glVertex3f(80, 20, 0);
-    glVertex3f(80, 80, 0);
-    glVertex3f(20, 80, 0);
+    glVertex2f(personX, personY);
+    glVertex2f(personX + personHorizontal, personY);
+    glVertex2f(personX + personHorizontal, personY + personVertical);
+    glVertex2f(personX, personY + personVertical);
     glEnd();
 }
 
