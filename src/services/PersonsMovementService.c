@@ -11,7 +11,6 @@ void movementPrincipalPerson()
         if (personX += 8 <= 500)
         {
             personX += 8;
-            glutPostRedisplay();
         }
     }
     else if (keyLeftPressed)
@@ -19,7 +18,6 @@ void movementPrincipalPerson()
         if (personX += 8 >= 0)
         {
             personX -= 8;
-            glutPostRedisplay();
         }
     }
 }

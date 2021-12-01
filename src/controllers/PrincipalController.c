@@ -32,5 +32,7 @@ void execute(int argc, char **argv)
     // variáveis de estado do OpenGL
     //glClearColor(1, 1, 1, 1);
 
+    glutTimerFunc(33, refreshDraw, 0);
+
     glutMainLoop();
 }

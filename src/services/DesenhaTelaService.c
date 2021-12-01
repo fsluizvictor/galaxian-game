@@ -39,3 +39,8 @@ void redimensionada(int width, int height)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void refreshDraw()
+{
+    glutTimerFunc(33, refreshDraw, 0);
+}
