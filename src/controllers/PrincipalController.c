@@ -22,11 +22,15 @@ void execute(int argc, char **argv)
     // registra callbacks para alguns eventos
     glutDisplayFunc(desenhaMinhaCena);
     glutReshapeFunc(redimensionada);
+
     glutKeyboardFunc(keyPressed);
+
+    glutSpecialFunc(keySpecialPressed);
+    glutSpecialUpFunc(keySpecialUnpressed);
 
     // configura valor inicial de algumas
     // variáveis de estado do OpenGL
-    glClearColor(1, 1, 1, 1);
+    //glClearColor(1, 1, 1, 1);
 
     glutMainLoop();
 }

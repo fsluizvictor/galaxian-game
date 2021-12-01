@@ -4,6 +4,8 @@
 
 #include "../entities/Constants.h"
 
+#include "PersonsMovementService.c"
+
 void keyPressed(unsigned char key, int x, int y)
 {
     switch (key)
@@ -15,23 +17,39 @@ void keyPressed(unsigned char key, int x, int y)
         //TODO: ADICIONAR TELA DE PAUSA
         break;
     case RESET: // Tecla "ESC"
-        //TODO: REINICIAR O JOGO
+        //glutPostRedisplay();
     default:
         break;
     }
 }
 
-void keyRocketControl(unsigned char key, int x, int y)
+void keySpecialPressed(int key, int x, int y)
 {
     switch (key)
     {
     case KEY_LEFT:
-        //TODO: ADICIONAR FUNCAO PARA CONTROLAR NAVE
+        keyLeftPressed = true;
+        movementPrincipalPerson();
         break;
     case KEY_RIGHT:
-    //TODO: ADICIONAR FUNCAO PARA CONTROLAR NAVE
-    case KEY_SPACE:
-        //TODO: ADICIONAR FUNCAO PARA A NAVE ATIRAR
+        keyRightPressed = true;
+        movementPrincipalPerson();
+    default:
+        break;
+    }
+}
+
+void keySpecialUnpressed(int key, int x, int y)
+{
+    switch (key)
+    {
+    case KEY_LEFT:
+        keyLeftPressed = false;
+        movementPrincipalPerson();
+        break;
+    case KEY_RIGHT:
+        keyRightPressed = false;
+        movementPrincipalPerson();
     default:
         break;
     }
