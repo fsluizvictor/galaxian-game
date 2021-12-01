@@ -20,6 +20,12 @@ To install SDL:
 apt-get install libsdl1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev
 ```
 
+For more informations:
+```
+https://www.prinmath.com/csci5229/misc/install.html
+```
+
+
 The code editor is optional but was used vscode editor, to install is very simple, can be these site or prompt:
 
 ```
