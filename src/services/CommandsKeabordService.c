@@ -10,14 +10,14 @@ void keyPressed(unsigned char key, int x, int y)
 {
     switch (key)
     {
-    case ESC:    // Tecla "ESC"
-        exit(0); // Sai da aplicação
+    case ESC:
+        exit(0);
         break;
-    case PAUSE: // Tecla "ESC"
-        //TODO: ADICIONAR TELA DE PAUSA
+    case PAUSE:
+
         break;
-    case RESET: // Tecla "ESC"
-        //glutPostRedisplay();
+    case RESET:
+        glutPostRedisplay();
     default:
         break;
     }
