@@ -47,19 +47,3 @@ void redimensionada(int width, int height)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
-
-// NOVIDADE: callback de "keyboard"
-void teclaPressionada(unsigned char key, int x, int y)
-{
-    // vê qual tecla foi pressionada
-    switch (key)
-    {
-    case 27:     // Tecla "ESC"
-        exit(0); // Sai da aplicação
-        break;
-    default:
-        break;
-    }
-}
-
-// função principal

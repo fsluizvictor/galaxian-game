@@ -5,6 +5,6 @@
 #define ESC 27
 #define PAUSE 'p'
 #define RESET 'r'
-#define LEFT_KEY GLUT_KEY_LEFT
-#define RIGHT_KEY GLUT_KEY_RIGHT
-#define SPACE_KEY ' '
+#define KEY_LEFT GLUT_KEY_LEFT
+#define KEY_RIGHT GLUT_KEY_RIGHT
+#define KEY_SPACE ' '

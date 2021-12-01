@@ -1,7 +1,8 @@
 #include <GL/glew.h>     // glew.h deve vir antes
 #include <GL/freeglut.h> // do freeglut.h
 
-#include "DesenhaTelaService.c"
+#include "../services/DesenhaTelaService.c"
+#include "../services/CommandsKeabordService.c"
 
 void execute(int argc, char **argv)
 {
@@ -21,11 +22,11 @@ void execute(int argc, char **argv)
     // registra callbacks para alguns eventos
     glutDisplayFunc(desenhaMinhaCena);
     glutReshapeFunc(redimensionada);
-    glutKeyboardFunc(teclaPressionada);
+    glutKeyboardFunc(keyPressed);
 
     // configura valor inicial de algumas
     // variáveis de estado do OpenGL
-    inicializa();
+    glClearColor(1, 1, 1, 1);
 
     glutMainLoop();
 }

@@ -3,8 +3,8 @@
 
 #include "PrincipalController.c"
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
-    execute(argc, *argv);
+    execute(argc, argv);
     return 0;
 }
