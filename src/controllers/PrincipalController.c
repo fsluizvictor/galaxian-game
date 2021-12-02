@@ -1,7 +1,7 @@
 #include <GL/glew.h>     // glew.h deve vir antes
 #include <GL/freeglut.h> // do freeglut.h
 
-#include "../services/DesenhaTelaService.c"
+#include "../view/DesenhaTelaService.c"
 #include "../services/CommandsKeabordService.c"
 
 void execute(int argc, char **argv)

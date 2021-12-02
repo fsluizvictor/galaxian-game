@@ -22,4 +22,9 @@ float personVertical = 30;
 bool keyRightPressed = false;
 bool keyLeftPressed = false;
 
+float enemyX = 5;
+float enemyY = 5;
+float enemyHorizontal = 10;
+float enemyVertical = 90;
+
 #endif

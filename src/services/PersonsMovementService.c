@@ -15,7 +15,7 @@ void movementPrincipalPerson()
     }
     else if (keyLeftPressed)
     {
-        if (personX += 8 >= 0)
+        if (personX -= 8 >= 0)
         {
             personX -= 8;
         }
