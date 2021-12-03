@@ -1,5 +1,5 @@
-#include <GL/glew.h>     // glew.h deve vir antes
-#include <GL/freeglut.h> // do freeglut.h
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 
 #include "../view/DesenhaTelaService.c"
 #include "../services/CommandsKeabordService.c"
@@ -27,7 +27,6 @@ void execute(int argc, char **argv)
 
     glutSpecialFunc(keySpecialPressed);
     glutSpecialUpFunc(keySpecialUnpressed);
-
     // configura valor inicial de algumas
     // variáveis de estado do OpenGL
     //glClearColor(1, 1, 1, 1);

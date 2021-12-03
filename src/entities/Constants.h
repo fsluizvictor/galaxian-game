@@ -13,18 +13,24 @@
 #define KEY_RIGHT GLUT_KEY_RIGHT
 #define KEY_SPACE ' '
 
-//PERSONAGEM
+//POSITION PESON
 float personX = 10;
 float personY = 10;
-float personHorizontal = 50;
-float personVertical = 30;
+//DIMENSION PERSON
+float personHorizontal = 10;
+float personVertical = 10;
 
 bool keyRightPressed = false;
 bool keyLeftPressed = false;
 
+//POSITION ENEMY
 float enemyX = 5;
-float enemyY = 5;
+float enemyY = 80;
+//DIMENSION ENEMY
 float enemyHorizontal = 10;
-float enemyVertical = 90;
+float enemyVertical = 10;
+//SPEED
+float speedEnemyX = 2;
+float speedEnemyY = 2;
 
 #endif
