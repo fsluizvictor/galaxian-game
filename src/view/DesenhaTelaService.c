@@ -4,6 +4,7 @@
 #include "../entities/Constants.h"
 #include "EnemiesView.c"
 #include "PersonView.c"
+#include "../services/EnemiesMovementService.c"
 
 // callback de desenho (display)
 void desenhaMinhaCena()
@@ -13,6 +14,7 @@ void desenhaMinhaCena()
 
     drawPerson();
     drawEnemy();
+    movementEnemy();
 
     glFlush();
 }
@@ -32,5 +34,6 @@ void redimensionada(int width, int height)
 
 void refreshDraw()
 {
+    glutPostRedisplay();
     glutTimerFunc(33, refreshDraw, 0);
 }

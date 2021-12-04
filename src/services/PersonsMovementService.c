@@ -8,16 +8,17 @@ void movementPrincipalPerson()
 {
     if (keyRightPressed)
     {
-        if (personX += 8 <= 500)
+        if (personX < 90 - (personHorizontal / 5))
         {
-            personX += 8;
+            personX += 5;
         }
     }
     else if (keyLeftPressed)
     {
-        if (personX -= 8 >= 0)
+
+        if (personX > 0 + (personHorizontal / 5))
         {
-            personX -= 8;
+            personX -= 5;
         }
     }
 }
