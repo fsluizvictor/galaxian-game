@@ -6,27 +6,29 @@
 
 void movementEnemy()
 {
-    enemyX += speedEnemyX;
-    enemyY += speedEnemyY;
+    if (enemyX < 90 - (enemyHorizontal / 5))
+    {
+        enemyX += 5;
+    }
+    glutPostRedisplay();
+    if (enemyX > 0 + (enemyHorizontal / 5))
+    {
+        enemyX -= 5;
+    }
+    glutPostRedisplay();
+}
 
-    if (enemyX < 0)
+void createEnemies()
+{
+    float verticalPosition = enemyY;
+
+    for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
     {
-        speedEnemyX -= speedEnemyX;
-        glutPostRedisplay();
-    }
-    else if (enemyX + enemyHorizontal > 500)
-    {
-        speedEnemyX -= speedEnemyX;
-        glutPostRedisplay();
-    }
-    else if (enemyY < 0)
-    {
-        speedEnemyY -= speedEnemyY;
-        glutPostRedisplay();
-    }
-    else if (enemyY + enemyVertical > 500)
-    {
-        speedEnemyY -= speedEnemyY;
-        glutPostRedisplay();
+        for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
+        {
+            /* code */
+        }
+
+        /* code */
     }
 }

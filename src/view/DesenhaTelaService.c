@@ -14,6 +14,7 @@ void desenhaMinhaCena()
 
     drawPerson();
     drawEnemy();
+
     movementEnemy();
 
     glFlush();

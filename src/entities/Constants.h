@@ -33,4 +33,10 @@ float enemyVertical = 10;
 float speedEnemyX = 2;
 float speedEnemyY = 2;
 
+//AMOUNT_ENEMIES
+#define AMOUNT_ENEMIES_HORIZONTAL 4;
+#define AMOUNT_ENEMIES_VERTICAL 9;
+
+float enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
+
 #endif
