@@ -6,6 +6,8 @@
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 
+#include "Enemy.c"
+
 #define ESC 27
 #define PAUSE 'p'
 #define RESET 'r'
@@ -34,9 +36,9 @@ float speedEnemyX = 2;
 float speedEnemyY = 2;
 
 //AMOUNT_ENEMIES
-#define AMOUNT_ENEMIES_HORIZONTAL 4;
-#define AMOUNT_ENEMIES_VERTICAL 9;
+#define AMOUNT_ENEMIES_HORIZONTAL 4
+#define AMOUNT_ENEMIES_VERTICAL 9
 
-float enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
+Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
 #endif

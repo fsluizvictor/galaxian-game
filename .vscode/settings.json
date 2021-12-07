@@ -3,5 +3,4 @@
         "constants.h": "c",
         "freeglut.h": "c"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
 }
