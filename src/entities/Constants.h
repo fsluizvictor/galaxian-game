@@ -1,12 +1,12 @@
-#ifndef _Constants_H_
-#define _Constants_H_
+#ifndef _CONSTANTS_H_
+#define _CONSTANTS_H_
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 
-#include "Enemy.c"
+#include "Enemy.h"
 
 #define ESC 27
 #define PAUSE 'p'
@@ -15,7 +15,9 @@
 #define KEY_RIGHT GLUT_KEY_RIGHT
 #define KEY_SPACE ' '
 
-//POSITION PESON
+//----------------------------------PERSON CONFIGURATION------------------------------------
+
+//POSITION PERSON
 float personX = 10;
 float personY = 10;
 //DIMENSION PERSON
@@ -24,6 +26,12 @@ float personVertical = 10;
 
 bool keyRightPressed = false;
 bool keyLeftPressed = false;
+
+//----------------------------------ENEMY CONFIGURATION------------------------------------
+#define POSITION_ENEMIES_VERTICAL 90
+#define POSITION_ENEMIES_HORIZONTAL 5
+#define DIMENSION_ENEMIES_VERTICAL 5
+#define DIMENSION_ENEMIES_HORIZONTAL 5
 
 //POSITION ENEMY
 float enemyX = 5;

@@ -1,26 +1,24 @@
-#include <GL/glew.h>     // glew.h deve vir antes
-#include <GL/freeglut.h> // do freeglut.h
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 
 #include "../entities/Constants.h"
+
 #include "EnemiesView.c"
 #include "PersonView.c"
 #include "../services/EnemiesMovementService.c"
 
-// callback de desenho (display)
 void desenhaMinhaCena()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(0, 1, 0);
 
     drawPerson();
-    drawEnemy();
-
-    movementEnemy();
+    //FIX: segmentation fault
+    //drawEnemy();
 
     glFlush();
 }
 
-// NOVIDADE: callback para o evento "reshape"
 void redimensionada(int width, int height)
 {
     glViewport(0, 0, width, height);
