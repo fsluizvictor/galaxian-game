@@ -3,7 +3,6 @@
 
 #include "../view/DesenhaTelaService.c"
 #include "../services/CommandsKeabordService.c"
-#include "../services/EnemiesMovementService.c"
 
 void execute(int argc, char **argv)
 {
@@ -33,6 +32,8 @@ void execute(int argc, char **argv)
     //glClearColor(1, 1, 1, 1);
 
     glutTimerFunc(33, refreshDraw, 0);
+
+    initializeViewProperties();
 
     glutMainLoop();
 }

@@ -5,14 +5,25 @@
 
 #include "EnemiesView.c"
 #include "PersonView.c"
-#include "../services/EnemiesMovementService.c"
+
+void initializeViewProperties()
+{
+    // cor do fundo (Background) preto
+    glClearColor(0, 0, 0, 1);
+
+    // habilita mesclagem de cores, para termos suporte a texturas
+    // com transparência
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
 
 void desenhaMinhaCena()
 {
+    glClearColor(1, 1, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(0, 1, 0);
 
     drawPerson();
+
     //FIX: segmentation fault
     //drawEnemy();
 

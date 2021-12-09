@@ -44,9 +44,16 @@ float speedEnemyX = 2;
 float speedEnemyY = 2;
 
 //AMOUNT_ENEMIES
-#define AMOUNT_ENEMIES_HORIZONTAL 4
-#define AMOUNT_ENEMIES_VERTICAL 9
+#define AMOUNT_ENEMIES_HORIZONTAL 3
+#define AMOUNT_ENEMIES_VERTICAL 7
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
+
+GLuint textureEnemy;
+
+int limitSuperiorHorizontal = 100;
+int limitInferiorHorizontal = 0;
+
+bool directionEnemy = true; // if true direction is right, if false direction is left
 
 #endif
