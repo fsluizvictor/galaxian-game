@@ -45,12 +45,13 @@ In this repository contais a implementatiom of game galaxian using the language 
 To compile:
 
 ```
-gcc -Wall -o runner src/controllers/Runner.c  -lglut -lGLU -lGL -lm
+gcc src/controllers/Runner.c  -lGL -lglut -lGLEW -lGLU -lSOIL
+
 ```
 
 To run:
 
 ```
-./runner
+./a.out
 ```
 
