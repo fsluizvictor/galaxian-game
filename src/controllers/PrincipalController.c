@@ -3,7 +3,7 @@
 
 #include "../view/DesenhaTelaService.c"
 #include "../view/TextureView.c"
-#include "../services/CommandsKeabordService.c"
+#include "../services/GameMovementService.c"
 
 void execute(int argc, char **argv)
 {
@@ -17,6 +17,7 @@ void execute(int argc, char **argv)
     glutInitWindowPosition(100, 100);
 
     //TODO: add function that create the game elements, enemies, rockets and others
+    initializeGameObjects();
 
     glutCreateWindow("GALAXIAN GAME");
 
@@ -28,11 +29,8 @@ void execute(int argc, char **argv)
 
     glutSpecialFunc(keySpecialPressed);
     glutSpecialUpFunc(keySpecialUnpressed);
-    // configura valor inicial de algumas
-    // variáveis de estado do OpenGL
-    //glClearColor(1, 1, 1, 1);
 
-    glutTimerFunc(33, refreshDraw, 0);
+    glutTimerFunc(33, refreshAll, 1);
 
     initializeTexture();
 

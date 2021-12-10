@@ -5,6 +5,7 @@
 #include "../entities/Constants.h"
 
 #include "PersonsMovementService.c"
+#include "EnemiesService.c"
 
 void keyPressed(unsigned char key, int x, int y)
 {
@@ -61,4 +62,18 @@ void keySpecialUnpressed(int key, int x, int y)
     default:
         break;
     }
+}
+
+void initializeGameObjects()
+{
+
+    createEnemies();
+}
+
+void refreshAll()
+{
+    movementEnemies();
+
+    glutPostRedisplay();
+    glutTimerFunc(33, refreshAll, 1);
 }

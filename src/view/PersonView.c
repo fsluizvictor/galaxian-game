@@ -12,16 +12,16 @@ void drawPerson()
     glBegin(GL_POLYGON);
 
     glTexCoord2f(0, 0);
-    glVertex2f(personX, personY);
+    glVertex3f(personX, personY, 0);
 
     glTexCoord2f(0, 1);
-    glVertex2f(personX + personHorizontal, personY);
+    glVertex3f(personX + personHorizontal, personY, 0);
 
     glTexCoord2f(1, 1);
-    glVertex2f(personX + personHorizontal, personY + personVertical);
+    glVertex3f(personX + personHorizontal, personY + personVertical, 0);
 
     glTexCoord2f(1, 0);
-    glVertex2f(personX, personY + personVertical);
+    glVertex3f(personX, personY + personVertical, 0);
 
     glEnd();
     glDisable(GL_TEXTURE_2D);

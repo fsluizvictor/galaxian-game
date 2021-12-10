@@ -1,6 +1,3 @@
-#include <SOIL/SOIL.h>
-#include <stdio.h>
-#include <stdbool.h>
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 
@@ -10,14 +7,14 @@ void drawEnemy()
 {
     for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
     {
-        for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; i++)
+        for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
         {
             glEnable(GL_TEXTURE_2D);
             glBindTexture(GL_TEXTURE_2D, textureEnemy);
             glBegin(GL_POLYGON);
 
             glBegin(GL_POLYGON);
-            if (enemiesMatrix[i][j].isAlive)
+            if (enemiesMatrix[i][j].isAlive && enemiesMatrix[i][j].enemyPositionX && enemiesMatrix[i][j].enemyPositionY)
             {
 
                 glTexCoord2f(0, 0);

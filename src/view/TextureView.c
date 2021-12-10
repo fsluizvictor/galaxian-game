@@ -23,6 +23,6 @@ void initializeTexture()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    textureEnemy = getTexture("/home/luiz_victor/Projects/cefet-mg/computing_graphic/galaxian/src/assets/alienEnemy.png");
-    texturePerson = getTexture("/home/luiz_victor/Projects/cefet-mg/computing_graphic/galaxian/src/assets/person.png");
+    textureEnemy = getTexture(pathtextureEnemy);
+    texturePerson = getTexture(pathtexturePerson);
 }

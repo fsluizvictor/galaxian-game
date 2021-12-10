@@ -19,13 +19,19 @@ void initializeViewProperties()
 
 void desenhaMinhaCena()
 {
-    glClearColor(1, 1, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, 100, 0, 100, -1, 1);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+
+    drawEnemy();
 
     drawPerson();
 
     //FIX: segmentation fault
-    //drawEnemy();
 
     glFlush();
 }
@@ -40,10 +46,4 @@ void redimensionada(int width, int height)
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-}
-
-void refreshDraw()
-{
-    glutPostRedisplay();
-    glutTimerFunc(33, refreshDraw, 0);
 }

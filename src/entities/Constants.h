@@ -8,6 +8,8 @@
 
 #include "Enemy.h"
 
+//----------------------------------KEYBOARD COMMAND CONFIGURATION------------------------------------
+
 #define ESC 27
 #define PAUSE 'p'
 #define RESET 'r'
@@ -41,7 +43,7 @@ float enemyHorizontal = 10;
 float enemyVertical = 10;
 //SPEED
 float speedEnemyX = 2;
-float speedEnemyY = 2;
+float speedEnemyY = 0.1;
 
 //AMOUNT_ENEMIES
 #define AMOUNT_ENEMIES_HORIZONTAL 3
@@ -49,12 +51,17 @@ float speedEnemyY = 2;
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
-GLuint textureEnemy;
-GLuint texturePerson;
-
 int limitSuperiorHorizontal = 100;
 int limitInferiorHorizontal = 0;
 
 bool directionEnemy = true; // if true direction is right, if false direction is left
+
+//----------------------------------TEXTURE CONFIGURATION------------------------------------
+
+GLuint textureEnemy;
+GLuint texturePerson;
+
+char *pathtextureEnemy = "src/assets/alienEnemy.png";
+char *pathtexturePerson = "src/assets/person.png";
 
 #endif
