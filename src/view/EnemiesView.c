@@ -6,12 +6,8 @@
 
 #include "../entities/Constants.h"
 
-#include "TextureView.c"
-
 void drawEnemy()
 {
-    textureEnemy = getTexture("/home/luiz_victor/Projects/cefet-mg/computing_graphic/galaxian/src/assets/alienEnemy.png");
-
     for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
     {
         for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; i++)

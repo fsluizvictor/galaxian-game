@@ -2,6 +2,7 @@
 #include <GL/freeglut.h>
 
 #include "../view/DesenhaTelaService.c"
+#include "../view/TextureView.c"
 #include "../services/CommandsKeabordService.c"
 
 void execute(int argc, char **argv)
@@ -32,6 +33,8 @@ void execute(int argc, char **argv)
     //glClearColor(1, 1, 1, 1);
 
     glutTimerFunc(33, refreshDraw, 0);
+
+    initializeTexture();
 
     initializeViewProperties();
 

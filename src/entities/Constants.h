@@ -50,6 +50,7 @@ float speedEnemyY = 2;
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
 GLuint textureEnemy;
+GLuint texturePerson;
 
 int limitSuperiorHorizontal = 100;
 int limitInferiorHorizontal = 0;
