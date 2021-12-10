@@ -25,4 +25,5 @@ void initializeTexture()
 
     textureEnemy = getTexture(pathtextureEnemy);
     texturePerson = getTexture(pathtexturePerson);
+    textureBackground = getTexture(pathtextureBackground);
 }

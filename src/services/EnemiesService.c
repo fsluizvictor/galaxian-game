@@ -51,26 +51,26 @@ void movementEnemies()
             if (enemiesMatrix[i][j].isAlive)
             {
 
-                if (enemiesMatrix[i][j].enemyPositionX > limitSuperiorHorizontal)
-                {
-                    limitSuperiorHorizontal = enemiesMatrix[i][j].enemyPositionX;
-                }
-
-                if (enemiesMatrix[i][j].enemyPositionX < limitInferiorHorizontal)
+                if (enemiesMatrix[i][j].enemyPositionX > limitInferiorHorizontal)
                 {
                     limitInferiorHorizontal = enemiesMatrix[i][j].enemyPositionX;
+                }
+
+                if (enemiesMatrix[i][j].enemyPositionX < limitSuperiorHorizontal)
+                {
+                    limitSuperiorHorizontal = enemiesMatrix[i][j].enemyPositionX;
                 }
             }
         }
     }
 
-    if (limitSuperiorHorizontal >= 97)
+    if (limitInferiorHorizontal >= 97)
     {
         directionEnemy = false;
         shiftEnemies(0, -speedEnemyY);
     }
 
-    if (limitInferiorHorizontal <= 3)
+    if (limitSuperiorHorizontal <= 3)
     {
         directionEnemy = true;
         shiftEnemies(0, -speedEnemyY);

@@ -17,7 +17,7 @@ void keyPressed(unsigned char key, int x, int y)
     case PAUSE:
 
         break;
-    case RESET:
+    case EXIT:
         glutPostRedisplay();
     default:
         break;

@@ -5,11 +5,12 @@
 
 #include "EnemiesView.c"
 #include "PersonView.c"
+#include "ScreenView.c"
 
 void initializeViewProperties()
 {
     // cor do fundo (Background) preto
-    glClearColor(0, 0, 0, 1);
+    //glClearColor(0, 0, 0, 1);
 
     // habilita mesclagem de cores, para termos suporte a texturas
     // com transparência
@@ -27,11 +28,11 @@ void desenhaMinhaCena()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
+    drawScreenBackground();
+
     drawEnemy();
 
     drawPerson();
-
-    //FIX: segmentation fault
 
     glFlush();
 }
