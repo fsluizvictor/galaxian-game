@@ -28,14 +28,14 @@ void desenhaMinhaCena()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    drawScreenBackground();
-
     drawInitScreen();
 
     //TODO: fix problem with change screen
 
     if (startGame)
     {
+        glClear(GL_COLOR_BUFFER_BIT);
+        drawScreenBackground();
         drawEnemy();
         drawPerson();
     }

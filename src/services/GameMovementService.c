@@ -22,6 +22,7 @@ void keyPressed(unsigned char key, int x, int y)
         break;
     case ENTER:
         startGame = true;
+        createEnemies();
         glutPostRedisplay();
         break;
 
