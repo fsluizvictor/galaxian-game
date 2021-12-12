@@ -48,3 +48,15 @@ void redimensionada(int width, int height)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void writeText(void *font, char *s, float x, float y, float z)
+{
+    int i;
+    glRasterPos3f(x, y, z);
+    glPushMatrix();
+    for (i = 0; i < strlen(s); i++)
+    {
+        glutBitmapCharacter(font, s[i]);
+    }
+    glPopMatrix();
+}
