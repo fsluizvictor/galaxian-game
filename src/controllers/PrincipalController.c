@@ -21,7 +21,6 @@ void execute(int argc, char **argv)
 
     glutCreateWindow("GALAXIAN GAME");
 
-    // registra callbacks para alguns eventos
     glutDisplayFunc(desenhaMinhaCena);
     glutReshapeFunc(redimensionada);
 

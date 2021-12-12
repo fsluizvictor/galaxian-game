@@ -26,4 +26,8 @@ void initializeTexture()
     textureEnemy = getTexture(pathtextureEnemy);
     texturePerson = getTexture(pathtexturePerson);
     textureBackground = getTexture(pathtextureBackground);
+
+    textureArrowsKeyboard = getTexture(pathtextureArrowsKeyboard);
+    textureEnterKey = getTexture(pathtextureEnterKey);
+    textureSpaceBar = getTexture(pathtextureSpaceBar);
 }

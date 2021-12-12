@@ -2,6 +2,7 @@
 #define _CONSTANTS_H_
 
 #include <stdio.h>
+#include <string.h>
 #include <stdbool.h>
 #include <GL/glew.h>
 #include <GL/freeglut.h>
@@ -62,7 +63,21 @@ GLuint textureEnemy;
 GLuint texturePerson;
 GLuint textureBackground;
 
+GLuint textureArrowsKeyboard;
+GLuint textureEnterKey;
+GLuint textureSpaceBar;
+
 char *pathtextureEnemy = "src/assets/alienEnemy.png";
 char *pathtexturePerson = "src/assets/person.png";
 char *pathtextureBackground = "src/assets/background.png";
+
+char *pathtextureArrowsKeyboard = "src/assets/arrowsKeyboard.png";
+char *pathtextureEnterKey = "src/assets/enterKey.png";
+char *pathtextureSpaceBar = "src/assets/spaceBar.png";
+
+//----------------------------------WRITE CONFIGURATION------------------------------------
+
+#define TITLE GLUT_BITMAP_TIMES_ROMAN_24
+#define SUB_TITLE GLUT_BITMAP_9_BY_15
+
 #endif
