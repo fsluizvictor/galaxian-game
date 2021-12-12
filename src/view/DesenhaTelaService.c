@@ -30,11 +30,15 @@ void desenhaMinhaCena()
 
     drawScreenBackground();
 
-    drawEnemy();
-
-    drawPerson();
-
     drawInitScreen();
+
+    //TODO: fix problem with change screen
+
+    if (startGame)
+    {
+        drawEnemy();
+        drawPerson();
+    }
 
     glFlush();
 }

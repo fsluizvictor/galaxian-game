@@ -83,7 +83,7 @@ void drawInitScreen()
     writeText("Press enter to start", 35, 74, false);
     drawImage(textureEnterKey, 30, 55, 70, 70);
     writeText("Instructions:", 10, 40, false);
-    writeText("Shoot:", 10, 30, false);
+    writeText("To Shoot:", 10, 30, false);
     drawImage(textureSpaceBar, 30, 25, 50, 35);
     writeText("To move:", 10, 14, false);
     drawImage(textureArrowsKeyboard, 30, 10, 50, 20);

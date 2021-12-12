@@ -11,14 +11,20 @@ void keyPressed(unsigned char key, int x, int y)
 {
     switch (key)
     {
-    case ESC:
+    case EXIT:
         exit(0);
         break;
     case PAUSE:
 
         break;
-    case EXIT:
+    case RESET:
         glutPostRedisplay();
+        break;
+    case ENTER:
+        startGame = true;
+        glutPostRedisplay();
+        break;
+
     default:
         break;
     }

@@ -11,9 +11,10 @@
 
 //----------------------------------KEYBOARD COMMAND CONFIGURATION------------------------------------
 
-#define ESC 27
+#define EXIT 27
+#define ENTER 13
 #define PAUSE 'p'
-#define EXIT 'r'
+#define RESET 'r'
 #define KEY_LEFT GLUT_KEY_LEFT
 #define KEY_RIGHT GLUT_KEY_RIGHT
 #define KEY_SPACE ' '
@@ -79,5 +80,9 @@ char *pathtextureSpaceBar = "src/assets/spaceBar.png";
 
 #define TITLE GLUT_BITMAP_TIMES_ROMAN_24
 #define SUB_TITLE GLUT_BITMAP_9_BY_15
+
+//----------------------------------WRITE CONFIGURATION------------------------------------
+
+bool startGame = false;
 
 #endif
