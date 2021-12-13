@@ -26,6 +26,11 @@ void keyPressed(unsigned char key, int x, int y)
         glutPostRedisplay();
         break;
 
+    case KEY_SPACE:
+        //TODO: adicionar o tiro
+
+        break;
+
     default:
         break;
     }
