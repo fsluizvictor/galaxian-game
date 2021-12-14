@@ -15,22 +15,27 @@ void keyPressed(unsigned char key, int x, int y)
         exit(0);
         break;
     case PAUSE:
-
+        FLAG_STOP_GAME = true;
+        FLAG_START_GAME = false;
+        break;
+    case UNPAUSE:
+        FLAG_STOP_GAME = false;
+        FLAG_START_GAME = true;
         break;
     case RESET:
         glutPostRedisplay();
         break;
     case ENTER:
-        startGame = true;
+        FLAG_INIT_SCREEN = false;
+        FLAG_START_GAME = true;
         createEnemies();
         glutPostRedisplay();
         break;
 
     case KEY_SPACE:
-        //TODO: adicionar o tiro
+        //TODO: adicionar shoot
 
         break;
-
     default:
         break;
     }
@@ -78,13 +83,15 @@ void keySpecialUnpressed(int key, int x, int y)
 
 void initializeGameObjects()
 {
-
     createEnemies();
 }
 
 void refreshAll()
 {
-    movementEnemies();
+    if (!FLAG_STOP_GAME)
+    {
+        movementEnemies();
+    }
 
     glutPostRedisplay();
     glutTimerFunc(33, refreshAll, 1);

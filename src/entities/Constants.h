@@ -14,6 +14,7 @@
 #define EXIT 27
 #define ENTER 13
 #define PAUSE 'p'
+#define UNPAUSE 'u'
 #define RESET 'r'
 #define KEY_LEFT GLUT_KEY_LEFT
 #define KEY_RIGHT GLUT_KEY_RIGHT
@@ -73,6 +74,8 @@ GLuint textureSucker;
 GLuint textureWinner1;
 GLuint textureWinner2;
 
+GLuint textureStop;
+
 char *pathtextureEnemy = "src/assets/alienEnemy.png";
 char *pathtexturePerson = "src/assets/person.png";
 char *pathtextureBackground = "src/assets/background.png";
@@ -86,6 +89,8 @@ char *pathtextureSucker = "src/assets/sucker.png";
 char *pathtextureWinner1 = "src/assets/winner1.png";
 char *pathtextureWinner2 = "src/assets/winner2.png";
 
+char *pathtextureStop = "src/assets/stop.png";
+
 //----------------------------------WRITE CONFIGURATION------------------------------------
 
 #define TITLE GLUT_BITMAP_TIMES_ROMAN_24
@@ -93,6 +98,8 @@ char *pathtextureWinner2 = "src/assets/winner2.png";
 
 //----------------------------------WRITE CONFIGURATION------------------------------------
 
-bool startGame = false;
+bool FLAG_START_GAME = false;
+bool FLAG_STOP_GAME = false;
+bool FLAG_INIT_SCREEN = true;
 
 #endif

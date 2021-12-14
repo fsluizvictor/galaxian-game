@@ -66,6 +66,29 @@ void drawScreenBackground()
     glDisable(GL_TEXTURE_2D);
 }
 
+void drawInitScreen()
+{
+    glBegin(GL_POLYGON);
+    glColor3f(0, 0, 0);
+    glVertex3f(0, 0, 0);
+
+    glVertex3f(0, 100, 0);
+
+    glVertex3f(100, 100, 0);
+
+    glVertex3f(100, 0, 0);
+    glEnd();
+    glDisable(GL_TEXTURE_2D);
+    writeText("Welcome Galaxian Game!", 25, 80, true);
+    writeText("Press enter to start", 35, 74, false);
+    drawImage(textureEnterKey, 30, 55, 70, 70);
+    writeText("Instructions:", 10, 40, false);
+    writeText("To Shoot:", 10, 30, false);
+    drawImage(textureSpaceBar, 30, 25, 50, 35);
+    writeText("To move:", 10, 14, false);
+    drawImage(textureArrowsKeyboard, 30, 10, 50, 20);
+}
+
 void drawLoserScreen()
 {
     glBegin(GL_POLYGON);
@@ -101,4 +124,23 @@ void drawWinnerScreen()
     writeText("CONGRATS GENIUS !!!", 25, 74, true);
     drawImage(textureWinner1, 10, 5, 50, 55);
     drawImage(textureWinner2, 55, 5, 95, 55);
+}
+
+void drawStopScreen()
+{
+    glBegin(GL_POLYGON);
+    glColor3f(0, 0, 0);
+    glVertex3f(0, 0, 0);
+
+    glVertex3f(0, 100, 0);
+
+    glVertex3f(100, 100, 0);
+
+    glVertex3f(100, 0, 0);
+    glEnd();
+    glDisable(GL_TEXTURE_2D);
+    writeText("S T O P E D", 40, 80, true);
+    writeText("PRESS P TO BACK", 38, 70, false);
+
+    drawImage(textureStop, 30, 5, 70, 55);
 }

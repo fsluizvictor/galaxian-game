@@ -28,18 +28,27 @@ void desenhaMinhaCena()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    drawWinnerScreen();
+    //drawWinnerScreen();
     //drawLoserScreen();
-    //drawInitScreen();
+
+    //drawStopScreen();
 
     //TODO: fix problem with change screen
 
-    if (startGame)
+    if (FLAG_INIT_SCREEN)
+    {
+        drawInitScreen();
+    }
+    else if (FLAG_START_GAME)
     {
         glClear(GL_COLOR_BUFFER_BIT);
         drawScreenBackground();
         drawEnemy();
         drawPerson();
+    }
+    else if (FLAG_STOP_GAME)
+    {
+        drawStopScreen();
     }
 
     glFlush();

@@ -35,4 +35,6 @@ void initializeTexture()
 
     textureWinner1 = getTexture(pathtextureWinner1);
     textureWinner2 = getTexture(pathtextureWinner2);
+
+    textureStop = getTexture(pathtextureStop);
 }
