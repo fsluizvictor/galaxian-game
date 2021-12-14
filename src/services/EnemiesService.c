@@ -41,6 +41,24 @@ void shiftEnemies(GLfloat x, GLfloat y)
     }
 }
 
+void checkVerticalPositionEnemies()
+{
+    for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
+    {
+        for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
+        {
+
+            if (enemiesMatrix[i][j].isAlive)
+            {
+                if (enemiesMatrix[i][j].enemyPositionY < 0)
+                {
+                    FLAG_GAME_OVER = true;
+                }
+            }
+        }
+    }
+}
+
 void movementEnemies()
 {
     for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
@@ -68,12 +86,14 @@ void movementEnemies()
     {
         directionEnemy = false;
         shiftEnemies(0, -speedEnemyY);
+        checkVerticalPositionEnemies();
     }
 
     if (limitSuperiorHorizontal <= 3)
     {
         directionEnemy = true;
         shiftEnemies(0, -speedEnemyY);
+        checkVerticalPositionEnemies();
     }
 
     if (directionEnemy)

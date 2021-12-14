@@ -8,6 +8,8 @@
 #include <GL/freeglut.h>
 
 #include "Enemy.h"
+#include "ShootEnemy.h"
+#include "ShootPerson.h"
 
 //----------------------------------KEYBOARD COMMAND CONFIGURATION------------------------------------
 
@@ -24,10 +26,13 @@
 
 //POSITION PERSON
 float personX = 10;
-float personY = 10;
+float personY = 0;
 //DIMENSION PERSON
 float personHorizontal = 10;
 float personVertical = 10;
+
+#define DIMENSION_PERSON_VERTICAL 10
+#define DIMENSION_PERSON_HORIZONTAL 10
 
 bool keyRightPressed = false;
 bool keyLeftPressed = false;
@@ -35,8 +40,8 @@ bool keyLeftPressed = false;
 //----------------------------------ENEMY CONFIGURATION------------------------------------
 #define POSITION_ENEMIES_VERTICAL 90
 #define POSITION_ENEMIES_HORIZONTAL 5
-#define DIMENSION_ENEMIES_VERTICAL 5
-#define DIMENSION_ENEMIES_HORIZONTAL 5
+#define DIMENSION_ENEMIES_VERTICAL 3
+#define DIMENSION_ENEMIES_HORIZONTAL 3
 
 //POSITION ENEMY
 float enemyX = 5;
@@ -46,7 +51,7 @@ float enemyHorizontal = 10;
 float enemyVertical = 10;
 //SPEED
 float speedEnemyX = 2;
-float speedEnemyY = 1;
+float speedEnemyY = 0.09;
 
 //AMOUNT_ENEMIES
 #define AMOUNT_ENEMIES_HORIZONTAL 3
@@ -54,10 +59,12 @@ float speedEnemyY = 1;
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
-int limitSuperiorHorizontal = 100;
-int limitInferiorHorizontal = 0;
-
 bool directionEnemy = true; // if true direction is right, if false direction is left
+
+//----------------------------------SHOOT CONFIGURATION------------------------------------
+
+ShootPerson shootPerson;
+ShootEnemy shootEnemy;
 
 //----------------------------------TEXTURE CONFIGURATION------------------------------------
 
@@ -96,10 +103,17 @@ char *pathtextureStop = "src/assets/stop.png";
 #define TITLE GLUT_BITMAP_TIMES_ROMAN_24
 #define SUB_TITLE GLUT_BITMAP_9_BY_15
 
-//----------------------------------WRITE CONFIGURATION------------------------------------
+//----------------------------------GAME CONFIGURATION------------------------------------
 
 bool FLAG_START_GAME = false;
 bool FLAG_STOP_GAME = false;
 bool FLAG_INIT_SCREEN = true;
+bool FLAG_GAME_OVER = false;
+
+int limitSuperiorHorizontal = 100;
+int limitInferiorHorizontal = 0;
+
+int limitSuperiorVertical = 100;
+int limitInferiorVertical = -10;
 
 #endif

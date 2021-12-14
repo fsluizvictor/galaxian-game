@@ -102,7 +102,7 @@ void drawLoserScreen()
     glVertex3f(100, 0, 0);
     glEnd();
     glDisable(GL_TEXTURE_2D);
-    writeText("You loser!", 40, 80, false);
+    writeText("GAME OVER!", 40, 80, false);
     writeText("S U C K E R", 35, 74, true);
     drawImage(textureSucker, 30, 55, 70, 70);
 }

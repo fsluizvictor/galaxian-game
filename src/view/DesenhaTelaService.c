@@ -6,6 +6,7 @@
 #include "EnemiesView.c"
 #include "PersonView.c"
 #include "ScreenView.c"
+#include "ShootView.c"
 
 void initializeViewProperties()
 {
@@ -45,10 +46,16 @@ void desenhaMinhaCena()
         drawScreenBackground();
         drawEnemy();
         drawPerson();
+        drawShootEnemy();
     }
     else if (FLAG_STOP_GAME)
     {
         drawStopScreen();
+    }
+    else if (FLAG_GAME_OVER)
+    {
+        glClear(GL_COLOR_BUFFER_BIT);
+        drawLoserScreen();
     }
 
     glFlush();

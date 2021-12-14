@@ -6,6 +6,7 @@
 
 #include "PersonsMovementService.c"
 #include "EnemiesService.c"
+#include "ShootService.c"
 
 void keyPressed(unsigned char key, int x, int y)
 {
@@ -15,7 +16,7 @@ void keyPressed(unsigned char key, int x, int y)
         exit(0);
         break;
     case PAUSE:
-        FLAG_STOP_GAME = true;
+        FLAG_STOP_GAME = !FLAG_STOP_GAME;
         FLAG_START_GAME = false;
         break;
     case UNPAUSE:
@@ -23,6 +24,7 @@ void keyPressed(unsigned char key, int x, int y)
         FLAG_START_GAME = true;
         break;
     case RESET:
+        FLAG_GAME_OVER = false;
         glutPostRedisplay();
         break;
     case ENTER:
@@ -46,16 +48,20 @@ void keySpecialPressed(int key, int x, int y)
     switch (key)
     {
     case KEY_LEFT:
-        keyLeftPressed = true;
-        movementPrincipalPerson();
-        glutPostRedisplay();
-
+        if (!FLAG_GAME_OVER && !FLAG_STOP_GAME)
+        {
+            keyLeftPressed = true;
+            movementPrincipalPerson();
+            glutPostRedisplay();
+        }
         break;
     case KEY_RIGHT:
-        keyRightPressed = true;
-        movementPrincipalPerson();
-        glutPostRedisplay();
-
+        if (!FLAG_GAME_OVER && !FLAG_STOP_GAME)
+        {
+            keyRightPressed = true;
+            movementPrincipalPerson();
+            glutPostRedisplay();
+        }
     default:
         break;
     }
@@ -66,16 +72,20 @@ void keySpecialUnpressed(int key, int x, int y)
     switch (key)
     {
     case KEY_LEFT:
-        keyLeftPressed = false;
-        movementPrincipalPerson();
-        glutPostRedisplay();
-
+        if (!FLAG_GAME_OVER && !FLAG_STOP_GAME)
+        {
+            keyLeftPressed = false;
+            movementPrincipalPerson();
+            glutPostRedisplay();
+        }
         break;
     case KEY_RIGHT:
-        keyRightPressed = false;
-        movementPrincipalPerson();
-        glutPostRedisplay();
-
+        if (!FLAG_GAME_OVER && !FLAG_STOP_GAME)
+        {
+            keyRightPressed = false;
+            movementPrincipalPerson();
+            glutPostRedisplay();
+        }
     default:
         break;
     }
@@ -88,9 +98,10 @@ void initializeGameObjects()
 
 void refreshAll()
 {
-    if (!FLAG_STOP_GAME)
+    if (!FLAG_STOP_GAME && !FLAG_GAME_OVER)
     {
         movementEnemies();
+        executeShootEnemies();
     }
 
     glutPostRedisplay();
