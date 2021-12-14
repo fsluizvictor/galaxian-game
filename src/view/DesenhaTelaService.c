@@ -28,7 +28,9 @@ void desenhaMinhaCena()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    drawInitScreen();
+    drawWinnerScreen();
+    //drawLoserScreen();
+    //drawInitScreen();
 
     //TODO: fix problem with change screen
 

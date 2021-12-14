@@ -30,4 +30,9 @@ void initializeTexture()
     textureArrowsKeyboard = getTexture(pathtextureArrowsKeyboard);
     textureEnterKey = getTexture(pathtextureEnterKey);
     textureSpaceBar = getTexture(pathtextureSpaceBar);
+
+    textureSucker = getTexture(pathtextureSucker);
+
+    textureWinner1 = getTexture(pathtextureWinner1);
+    textureWinner2 = getTexture(pathtextureWinner2);
 }

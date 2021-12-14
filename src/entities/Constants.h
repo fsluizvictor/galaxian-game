@@ -45,11 +45,11 @@ float enemyHorizontal = 10;
 float enemyVertical = 10;
 //SPEED
 float speedEnemyX = 2;
-float speedEnemyY = 0.5;
+float speedEnemyY = 1;
 
 //AMOUNT_ENEMIES
-#define AMOUNT_ENEMIES_HORIZONTAL 4
-#define AMOUNT_ENEMIES_VERTICAL 9
+#define AMOUNT_ENEMIES_HORIZONTAL 3
+#define AMOUNT_ENEMIES_VERTICAL 7
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
@@ -68,6 +68,11 @@ GLuint textureArrowsKeyboard;
 GLuint textureEnterKey;
 GLuint textureSpaceBar;
 
+GLuint textureSucker;
+
+GLuint textureWinner1;
+GLuint textureWinner2;
+
 char *pathtextureEnemy = "src/assets/alienEnemy.png";
 char *pathtexturePerson = "src/assets/person.png";
 char *pathtextureBackground = "src/assets/background.png";
@@ -75,6 +80,11 @@ char *pathtextureBackground = "src/assets/background.png";
 char *pathtextureArrowsKeyboard = "src/assets/arrowsKeyboard.png";
 char *pathtextureEnterKey = "src/assets/enterKey.png";
 char *pathtextureSpaceBar = "src/assets/spaceBar.png";
+
+char *pathtextureSucker = "src/assets/sucker.png";
+
+char *pathtextureWinner1 = "src/assets/winner1.png";
+char *pathtextureWinner2 = "src/assets/winner2.png";
 
 //----------------------------------WRITE CONFIGURATION------------------------------------
 

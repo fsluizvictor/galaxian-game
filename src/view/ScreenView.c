@@ -66,7 +66,7 @@ void drawScreenBackground()
     glDisable(GL_TEXTURE_2D);
 }
 
-void drawInitScreen()
+void drawLoserScreen()
 {
     glBegin(GL_POLYGON);
     glColor3f(0, 0, 0);
@@ -79,12 +79,26 @@ void drawInitScreen()
     glVertex3f(100, 0, 0);
     glEnd();
     glDisable(GL_TEXTURE_2D);
-    writeText("Welcome Galaxian Game!", 25, 80, true);
-    writeText("Press enter to start", 35, 74, false);
-    drawImage(textureEnterKey, 30, 55, 70, 70);
-    writeText("Instructions:", 10, 40, false);
-    writeText("To Shoot:", 10, 30, false);
-    drawImage(textureSpaceBar, 30, 25, 50, 35);
-    writeText("To move:", 10, 14, false);
-    drawImage(textureArrowsKeyboard, 30, 10, 50, 20);
+    writeText("You loser!", 40, 80, false);
+    writeText("S U C K E R", 35, 74, true);
+    drawImage(textureSucker, 30, 55, 70, 70);
+}
+
+void drawWinnerScreen()
+{
+    glBegin(GL_POLYGON);
+    glColor3f(0, 0, 0);
+    glVertex3f(0, 0, 0);
+
+    glVertex3f(0, 100, 0);
+
+    glVertex3f(100, 100, 0);
+
+    glVertex3f(100, 0, 0);
+    glEnd();
+    glDisable(GL_TEXTURE_2D);
+    writeText("W I N N E R !!!", 40, 80, false);
+    writeText("CONGRATS GENIUS !!!", 25, 74, true);
+    drawImage(textureWinner1, 10, 5, 50, 55);
+    drawImage(textureWinner2, 55, 5, 95, 55);
 }
