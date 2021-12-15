@@ -76,7 +76,7 @@ GLuint textureArrowsKeyboard;
 GLuint textureEnterKey;
 GLuint textureSpaceBar;
 
-GLuint textureSucker;
+GLuint textureGameOver;
 
 GLuint textureWinner1;
 GLuint textureWinner2;
@@ -91,7 +91,7 @@ char *pathtextureArrowsKeyboard = "src/assets/arrowsKeyboard.png";
 char *pathtextureEnterKey = "src/assets/enterKey.png";
 char *pathtextureSpaceBar = "src/assets/spaceBar.png";
 
-char *pathtextureSucker = "src/assets/sucker.png";
+char *pathtextureGameOver = "src/assets/gameOver.png";
 
 char *pathtextureWinner1 = "src/assets/winner1.png";
 char *pathtextureWinner2 = "src/assets/winner2.png";

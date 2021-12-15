@@ -31,7 +31,7 @@ void initializeTexture()
     textureEnterKey = getTexture(pathtextureEnterKey);
     textureSpaceBar = getTexture(pathtextureSpaceBar);
 
-    textureSucker = getTexture(pathtextureSucker);
+    textureGameOver = getTexture(pathtextureGameOver);
 
     textureWinner1 = getTexture(pathtextureWinner1);
     textureWinner2 = getTexture(pathtextureWinner2);

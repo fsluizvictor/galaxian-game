@@ -17,14 +17,12 @@ void keyPressed(unsigned char key, int x, int y)
         break;
     case PAUSE:
         FLAG_STOP_GAME = !FLAG_STOP_GAME;
-        FLAG_START_GAME = false;
-        break;
-    case UNPAUSE:
-        FLAG_STOP_GAME = false;
-        FLAG_START_GAME = true;
+        FLAG_START_GAME = !FLAG_START_GAME;
         break;
     case RESET:
         FLAG_GAME_OVER = false;
+        FLAG_START_GAME = !FLAG_START_GAME;
+        createEnemies();
         glutPostRedisplay();
         break;
     case ENTER:

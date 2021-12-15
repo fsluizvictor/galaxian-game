@@ -52,6 +52,7 @@ void executeShootEnemies()
             if (shootEnemy.shootEnemyPositionY >= 0 && shootEnemy.shootEnemyPositionY <= 10)
             {
                 FLAG_GAME_OVER = true;
+                FLAG_START_GAME = false;
                 shootEnemy.shootEnemyPositionY = limitInferiorVertical;
             }
         }

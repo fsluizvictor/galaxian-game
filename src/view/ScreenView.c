@@ -89,7 +89,7 @@ void drawInitScreen()
     drawImage(textureArrowsKeyboard, 30, 10, 50, 20);
 }
 
-void drawLoserScreen()
+void drawGameOverScreen()
 {
     glBegin(GL_POLYGON);
     glColor3f(0, 0, 0);
@@ -102,9 +102,8 @@ void drawLoserScreen()
     glVertex3f(100, 0, 0);
     glEnd();
     glDisable(GL_TEXTURE_2D);
-    writeText("GAME OVER!", 40, 80, false);
-    writeText("S U C K E R", 35, 74, true);
-    drawImage(textureSucker, 30, 55, 70, 70);
+    drawImage(textureGameOver, 30, 30, 70, 70);
+    writeText("PRESS R TO RESTART", 32, 20, false);
 }
 
 void drawWinnerScreen()

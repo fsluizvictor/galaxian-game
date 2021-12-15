@@ -54,8 +54,7 @@ void desenhaMinhaCena()
     }
     else if (FLAG_GAME_OVER)
     {
-        glClear(GL_COLOR_BUFFER_BIT);
-        drawLoserScreen();
+        drawGameOverScreen();
     }
 
     glFlush();
