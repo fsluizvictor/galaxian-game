@@ -43,12 +43,6 @@ bool keyLeftPressed = false;
 #define DIMENSION_ENEMIES_VERTICAL 3
 #define DIMENSION_ENEMIES_HORIZONTAL 3
 
-//POSITION ENEMY
-float enemyX = 5;
-float enemyY = 80;
-//DIMENSION ENEMY
-float enemyHorizontal = 10;
-float enemyVertical = 10;
 //SPEED
 float speedEnemyX = 2;
 float speedEnemyY = 0.09;
