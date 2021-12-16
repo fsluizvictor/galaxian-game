@@ -47,6 +47,7 @@ void desenhaMinhaCena()
         drawEnemy();
         drawPerson();
         drawShootEnemy();
+        drawShootPerson();
     }
     else if (FLAG_STOP_GAME)
     {

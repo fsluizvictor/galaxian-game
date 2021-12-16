@@ -14,7 +14,7 @@ void drawEnemy()
             glBegin(GL_POLYGON);
 
             glBegin(GL_POLYGON);
-            if (enemiesMatrix[i][j].isAlive && enemiesMatrix[i][j].enemyPositionX && enemiesMatrix[i][j].enemyPositionY)
+            if (enemiesMatrix[i][j].isAlive)
             {
 
                 glTexCoord2f(0, 0);

@@ -8,6 +8,7 @@
 #include <GL/freeglut.h>
 
 #include "Enemy.h"
+#include "Person.h"
 #include "ShootEnemy.h"
 #include "ShootPerson.h"
 
@@ -33,6 +34,9 @@ float personVertical = 10;
 
 #define DIMENSION_PERSON_VERTICAL 10
 #define DIMENSION_PERSON_HORIZONTAL 10
+
+#define LIMIT_SUPERIOR_VERTICAL_PERSON 100
+#define LIMIT_INFERIOR_VERTICAL_PERSON 10
 
 bool keyRightPressed = false;
 bool keyLeftPressed = false;
@@ -103,6 +107,8 @@ bool FLAG_START_GAME = false;
 bool FLAG_STOP_GAME = false;
 bool FLAG_INIT_SCREEN = true;
 bool FLAG_GAME_OVER = false;
+
+bool FLAG_CAN_SHOOT_PERSON = false;
 
 int limitSuperiorHorizontal = 100;
 int limitInferiorHorizontal = 0;
