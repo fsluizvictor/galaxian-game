@@ -33,7 +33,9 @@ void keyPressed(unsigned char key, int x, int y)
         break;
 
     case KEY_SPACE:
-        //TODO: adicionar shoot
+        //TODO: shoot function
+        FLAG_CAN_SHOOT_PERSON = !FLAG_CAN_SHOOT_PERSON;
+        executeShootPerson();
 
         break;
     default:
@@ -100,6 +102,10 @@ void refreshAll()
     {
         movementEnemies();
         executeShootEnemies();
+        if (FLAG_CAN_SHOOT_PERSON)
+        {
+            executeShootPerson();
+        }
     }
 
     glutPostRedisplay();

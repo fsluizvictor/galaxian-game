@@ -15,11 +15,13 @@ ShootEnemy createShootEnemy(GLfloat shootEnemyPositionX,
 }
 
 ShootPerson createShootPerson(GLfloat shootPersonPositionX,
-                              GLfloat shootPersonPositionY)
+                              GLfloat shootPersonPositionY,
+                              bool isVisible)
 {
     ShootPerson shootPerson;
     shootPerson.shootPersonPositionX = shootPersonPositionX;
     shootPerson.shootPersonPositionY = shootPersonPositionY;
+    shootPerson.isVisible = isVisible;
     return shootPerson;
 }
 
@@ -47,13 +49,45 @@ void executeShootEnemies()
     else
     {
         shootEnemy.shootEnemyPositionY--;
-        if (shootEnemy.shootEnemyPositionX >= personX - DIMENSION_PERSON_HORIZONTAL && shootEnemy.shootEnemyPositionX <= personX + DIMENSION_PERSON_HORIZONTAL)
+        if (shootEnemy.shootEnemyPositionX >= personX - DIMENSION_PERSON_HORIZONTAL &&
+            shootEnemy.shootEnemyPositionX <= personX + DIMENSION_PERSON_HORIZONTAL)
         {
             if (shootEnemy.shootEnemyPositionY >= 0 && shootEnemy.shootEnemyPositionY <= 10)
             {
                 FLAG_GAME_OVER = true;
                 FLAG_START_GAME = false;
                 shootEnemy.shootEnemyPositionY = limitInferiorVertical;
+            }
+        }
+    }
+}
+
+void executeShootPerson()
+{
+
+    for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
+    {
+        for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
+        {
+            if (shootPerson.shootPersonPositionY <= LIMIT_SUPERIOR_VERTICAL_PERSON)
+            {
+                shootPerson.shootPersonPositionY++;
+                if (shootPerson.shootPersonPositionX >= enemiesMatrix[i][j].enemyPositionX - DIMENSION_ENEMIES_HORIZONTAL &&
+                    shootPerson.shootPersonPositionX <= enemiesMatrix[i][j].enemyPositionX + DIMENSION_ENEMIES_HORIZONTAL)
+                {
+                    if (shootPerson.shootPersonPositionY >= enemiesMatrix[i][j].enemyPositionY - DIMENSION_ENEMIES_VERTICAL &&
+                        shootPerson.shootPersonPositionY <= enemiesMatrix[i][j].enemyPositionY + DIMENSION_ENEMIES_VERTICAL)
+                    {
+                        enemiesMatrix[i][j].isAlive = false;
+                        shootPerson.isVisible = false;
+                    }
+                }
+            }
+            else
+            {
+                shootPerson = createShootPerson(personX,
+                                                personY,
+                                                true);
             }
         }
     }

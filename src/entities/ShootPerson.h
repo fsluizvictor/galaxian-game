@@ -10,9 +10,11 @@ typedef struct ShootPerson
 {
     GLfloat shootPersonPositionX;
     GLfloat shootPersonPositionY;
+    bool isVisible;
 } ShootPerson;
 
 ShootPerson createshootPerson(GLfloat shootPersonPositionX,
-                              GLfloat shootPersonPositionY);
+                              GLfloat shootPersonPositionY,
+                              bool isVisible);
 
 #endif

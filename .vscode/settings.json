@@ -4,6 +4,7 @@
         "freeglut.h": "c",
         "glew.h": "c",
         "createenemy.h": "c",
-        "enemy.h": "c"
+        "enemy.h": "c",
+        "shootperson.h": "c"
     },
 }
