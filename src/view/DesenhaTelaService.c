@@ -57,6 +57,10 @@ void desenhaMinhaCena()
     {
         drawGameOverScreen();
     }
+    else if (countEnemies == quantityOfEnemies)
+    {
+        drawWinnerScreen();
+    }
 
     glFlush();
 }

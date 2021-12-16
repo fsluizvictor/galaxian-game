@@ -49,11 +49,11 @@ bool keyLeftPressed = false;
 
 //SPEED
 float speedEnemyX = 2;
-float speedEnemyY = 0.09;
+float speedEnemyY = 0.005;
 
 //AMOUNT_ENEMIES
-#define AMOUNT_ENEMIES_HORIZONTAL 3
-#define AMOUNT_ENEMIES_VERTICAL 7
+#define AMOUNT_ENEMIES_HORIZONTAL 1
+#define AMOUNT_ENEMIES_VERTICAL 5
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
@@ -110,10 +110,15 @@ bool FLAG_GAME_OVER = false;
 
 bool FLAG_CAN_SHOOT_PERSON = false;
 
+bool FLAG_CHAMPION = false;
+
 int limitSuperiorHorizontal = 100;
 int limitInferiorHorizontal = 0;
 
 int limitSuperiorVertical = 100;
 int limitInferiorVertical = -10;
+
+int countEnemies = 0;
+int quantityOfEnemies = AMOUNT_ENEMIES_HORIZONTAL * AMOUNT_ENEMIES_VERTICAL;
 
 #endif

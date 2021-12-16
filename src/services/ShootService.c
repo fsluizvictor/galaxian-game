@@ -78,6 +78,7 @@ void executeShootPerson()
                     if (shootPerson.shootPersonPositionY >= enemiesMatrix[i][j].enemyPositionY - DIMENSION_ENEMIES_VERTICAL &&
                         shootPerson.shootPersonPositionY <= enemiesMatrix[i][j].enemyPositionY + DIMENSION_ENEMIES_VERTICAL)
                     {
+                        countEnemies++;
                         enemiesMatrix[i][j].isAlive = false;
                         shootPerson.isVisible = false;
                     }

@@ -100,11 +100,18 @@ void refreshAll()
 {
     if (!FLAG_STOP_GAME && !FLAG_GAME_OVER)
     {
+
         movementEnemies();
         executeShootEnemies();
         if (FLAG_CAN_SHOOT_PERSON)
         {
             executeShootPerson();
+        }
+
+        if (countEnemies == quantityOfEnemies)
+        {
+            FLAG_CHAMPION = true;
+            FLAG_START_GAME = false;
         }
     }
 
