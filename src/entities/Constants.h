@@ -52,8 +52,8 @@ float speedEnemyX = 1;
 float speedEnemyY = 1;
 
 //AMOUNT_ENEMIES
-#define AMOUNT_ENEMIES_HORIZONTAL 2
-#define AMOUNT_ENEMIES_VERTICAL 7
+#define AMOUNT_ENEMIES_HORIZONTAL 1
+#define AMOUNT_ENEMIES_VERTICAL 3
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 
@@ -64,7 +64,7 @@ bool directionEnemy = true; // if true direction is right, if false direction is
 ShootPerson shootPerson;
 ShootEnemy shootEnemy;
 
-float speedShootPerson = 0.3;
+float speedShootPerson = 2;
 
 //----------------------------------TEXTURE CONFIGURATION------------------------------------
 
