@@ -31,12 +31,10 @@ void keyPressed(unsigned char key, int x, int y)
         createEnemies();
         glutPostRedisplay();
         break;
-
     case KEY_SPACE:
         //TODO: shoot function
         FLAG_CAN_SHOOT_PERSON = !FLAG_CAN_SHOOT_PERSON;
         executeShootPerson();
-
         break;
     default:
         break;
@@ -86,6 +84,7 @@ void keySpecialUnpressed(int key, int x, int y)
             movementPrincipalPerson();
             glutPostRedisplay();
         }
+        break;
     default:
         break;
     }

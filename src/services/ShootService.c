@@ -64,6 +64,11 @@ void executeShootEnemies()
 
 void executeShootPerson()
 {
+    if (shootPerson.shootPersonPositionY >= limitSuperiorVertical)
+    {
+        shootPerson.isVisible = false;
+        FLAG_CAN_SHOOT_PERSON = false;
+    }
 
     for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
     {
@@ -84,7 +89,7 @@ void executeShootPerson()
                     }
                 }
             }
-            else
+            else if (FLAG_CAN_SHOOT_PERSON)
             {
                 shootPerson = createShootPerson(personX,
                                                 personY,

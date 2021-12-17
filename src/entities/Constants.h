@@ -48,12 +48,12 @@ bool keyLeftPressed = false;
 #define DIMENSION_ENEMIES_HORIZONTAL 3
 
 //SPEED
-float speedEnemyX = 2;
-float speedEnemyY = 0.005;
+float speedEnemyX = 1;
+float speedEnemyY = 1;
 
 //AMOUNT_ENEMIES
-#define AMOUNT_ENEMIES_HORIZONTAL 1
-#define AMOUNT_ENEMIES_VERTICAL 5
+#define AMOUNT_ENEMIES_HORIZONTAL 3
+#define AMOUNT_ENEMIES_VERTICAL 9
 
 Enemy enemiesMatrix[AMOUNT_ENEMIES_HORIZONTAL][AMOUNT_ENEMIES_VERTICAL];
 

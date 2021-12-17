@@ -61,6 +61,10 @@ void checkVerticalPositionEnemies()
 
 void movementEnemies()
 {
+
+    limitInferiorHorizontal = 0;
+    limitSuperiorHorizontal = 100;
+
     for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
     {
         for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
@@ -82,7 +86,7 @@ void movementEnemies()
         }
     }
 
-    if (limitInferiorHorizontal >= 97)
+    if (limitInferiorHorizontal >= 100)
     {
         directionEnemy = false;
         shiftEnemies(0, -speedEnemyY);
@@ -98,10 +102,10 @@ void movementEnemies()
 
     if (directionEnemy)
     {
-        shiftEnemies(0.5, 0);
+        shiftEnemies(speedEnemyX, 0);
     }
     else
     {
-        shiftEnemies(-0.5, 0);
+        shiftEnemies(-speedEnemyX, 0);
     }
 }
