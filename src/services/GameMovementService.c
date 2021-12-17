@@ -33,7 +33,8 @@ void keyPressed(unsigned char key, int x, int y)
         break;
     case KEY_SPACE:
         //TODO: shoot function
-        FLAG_CAN_SHOOT_PERSON = !FLAG_CAN_SHOOT_PERSON;
+        FLAG_CAN_SHOOT_PERSON = true;
+
         executeShootPerson();
         break;
     default:

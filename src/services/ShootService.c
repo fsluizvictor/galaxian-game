@@ -64,37 +64,40 @@ void executeShootEnemies()
 
 void executeShootPerson()
 {
-    if (shootPerson.shootPersonPositionY >= limitSuperiorVertical)
+    if (shootPerson.shootPersonPositionY >= LIMIT_SUPERIOR_VERTICAL_PERSON)
     {
         shootPerson.isVisible = false;
-        FLAG_CAN_SHOOT_PERSON = false;
     }
 
-    for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
+    if (shootPerson.isVisible)
     {
-        for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
+        for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
         {
-            if (shootPerson.shootPersonPositionY <= LIMIT_SUPERIOR_VERTICAL_PERSON)
+            for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
             {
-                shootPerson.shootPersonPositionY++;
-                if (shootPerson.shootPersonPositionX >= enemiesMatrix[i][j].enemyPositionX - DIMENSION_ENEMIES_HORIZONTAL &&
-                    shootPerson.shootPersonPositionX <= enemiesMatrix[i][j].enemyPositionX + DIMENSION_ENEMIES_HORIZONTAL)
+                if (shootPerson.shootPersonPositionY <= LIMIT_SUPERIOR_VERTICAL_PERSON && enemiesMatrix[i][j].isAlive)
                 {
-                    if (shootPerson.shootPersonPositionY >= enemiesMatrix[i][j].enemyPositionY - DIMENSION_ENEMIES_VERTICAL &&
-                        shootPerson.shootPersonPositionY <= enemiesMatrix[i][j].enemyPositionY + DIMENSION_ENEMIES_VERTICAL)
+                    shootPerson.shootPersonPositionY += speedShootPerson;
+                    if (shootPerson.shootPersonPositionX >= enemiesMatrix[i][j].enemyPositionX - DIMENSION_ENEMIES_HORIZONTAL &&
+                        shootPerson.shootPersonPositionX <= enemiesMatrix[i][j].enemyPositionX + DIMENSION_ENEMIES_HORIZONTAL)
                     {
-                        countEnemies++;
-                        enemiesMatrix[i][j].isAlive = false;
-                        shootPerson.isVisible = false;
+                        if (shootPerson.shootPersonPositionY >= enemiesMatrix[i][j].enemyPositionY - DIMENSION_ENEMIES_VERTICAL &&
+                            shootPerson.shootPersonPositionY <= enemiesMatrix[i][j].enemyPositionY + DIMENSION_ENEMIES_VERTICAL)
+                        {
+                            countEnemies++;
+                            enemiesMatrix[i][j].isAlive = false;
+                            shootPerson.isVisible = false;
+                        }
                     }
                 }
             }
-            else if (FLAG_CAN_SHOOT_PERSON)
-            {
-                shootPerson = createShootPerson(personX,
-                                                personY,
-                                                true);
-            }
         }
+    }
+    else if (FLAG_CAN_SHOOT_PERSON)
+    {
+        shootPerson = createShootPerson(personX,
+                                        personY,
+                                        true);
+        FLAG_CAN_SHOOT_PERSON = false;
     }
 }
