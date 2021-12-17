@@ -87,6 +87,7 @@ void executeShootPerson()
                             countEnemies++;
                             enemiesMatrix[i][j].isAlive = false;
                             shootPerson.isVisible = false;
+                            
                         }
                     }
                 }

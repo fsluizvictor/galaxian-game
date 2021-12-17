@@ -34,9 +34,9 @@ void desenhaMinhaCena()
 
     //drawStopScreen();
 
-    //TODO: fix FLAGS 
+    //TODO: fix FLAGS
 
-    if (FLAG_INIT_SCREEN)
+    if (FLAG_INIT_SCREEN == true)
     {
         drawInitScreen();
     }
@@ -57,7 +57,7 @@ void desenhaMinhaCena()
     {
         drawGameOverScreen();
     }
-    else if (countEnemies == quantityOfEnemies)
+    else if (quantityOfEnemies == 0)
     {
         drawWinnerScreen();
     }

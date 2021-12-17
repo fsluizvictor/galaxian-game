@@ -32,9 +32,7 @@ void keyPressed(unsigned char key, int x, int y)
         glutPostRedisplay();
         break;
     case KEY_SPACE:
-        //TODO: shoot function
         FLAG_CAN_SHOOT_PERSON = true;
-
         executeShootPerson();
         break;
     default:
@@ -107,7 +105,7 @@ void refreshAll()
         {
             executeShootPerson();
         }
-
+        int quantityOfEnemies = AMOUNT_ENEMIES_HORIZONTAL * AMOUNT_ENEMIES_VERTICAL;
         if (countEnemies == quantityOfEnemies)
         {
             FLAG_CHAMPION = true;
