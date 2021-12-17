@@ -34,7 +34,7 @@ void desenhaMinhaCena()
 
     //drawStopScreen();
 
-    //TODO: fix problem with change screen
+    //TODO: fix FLAGS 
 
     if (FLAG_INIT_SCREEN)
     {
