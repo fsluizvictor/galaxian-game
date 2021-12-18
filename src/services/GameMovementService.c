@@ -15,11 +15,13 @@ void keyPressed(unsigned char key, int x, int y)
     case EXIT:
         exit(0);
         break;
+    case PAUSE2:
     case PAUSE:
         FLAG_STOP_GAME = !FLAG_STOP_GAME;
         FLAG_START_GAME = !FLAG_START_GAME;
         break;
     case RESET:
+    case RESET2:
         FLAG_GAME_OVER = false;
         FLAG_START_GAME = !FLAG_START_GAME;
         createEnemies();
@@ -32,9 +34,7 @@ void keyPressed(unsigned char key, int x, int y)
         glutPostRedisplay();
         break;
     case KEY_SPACE:
-        //TODO: shoot function
         FLAG_CAN_SHOOT_PERSON = true;
-
         executeShootPerson();
         break;
     default:
@@ -108,7 +108,19 @@ void refreshAll()
             executeShootPerson();
         }
 
-        if (countEnemies == quantityOfEnemies)
+        int quantityOfEnemies = 0;
+        for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
+        {
+            for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
+            {
+                if (enemiesMatrix[i][j].isAlive)
+                {
+                    quantityOfEnemies++;
+                }
+            }
+        }
+
+        if (quantityOfEnemies < 1)
         {
             FLAG_CHAMPION = true;
             FLAG_START_GAME = false;

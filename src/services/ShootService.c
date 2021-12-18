@@ -71,13 +71,14 @@ void executeShootPerson()
 
     if (shootPerson.isVisible)
     {
+        shootPerson.shootPersonPositionY += speedShootPerson;
         for (int i = 0; i < AMOUNT_ENEMIES_HORIZONTAL; i++)
         {
             for (int j = 0; j < AMOUNT_ENEMIES_VERTICAL; j++)
             {
                 if (shootPerson.shootPersonPositionY <= LIMIT_SUPERIOR_VERTICAL_PERSON && enemiesMatrix[i][j].isAlive)
                 {
-                    shootPerson.shootPersonPositionY += speedShootPerson;
+                    
                     if (shootPerson.shootPersonPositionX >= enemiesMatrix[i][j].enemyPositionX - DIMENSION_ENEMIES_HORIZONTAL &&
                         shootPerson.shootPersonPositionX <= enemiesMatrix[i][j].enemyPositionX + DIMENSION_ENEMIES_HORIZONTAL)
                     {
@@ -87,6 +88,7 @@ void executeShootPerson()
                             countEnemies++;
                             enemiesMatrix[i][j].isAlive = false;
                             shootPerson.isVisible = false;
+                            
                         }
                     }
                 }

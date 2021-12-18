@@ -21,10 +21,10 @@ void drawShootPerson()
     {
         glBegin(GL_POLYGON);
         glColor3f(1, 1, 1);
-        glVertex3f(shootPerson.shootPersonPositionX - 0.5, shootPerson.shootPersonPositionY - 2, 0);
-        glVertex3f(shootPerson.shootPersonPositionX - 0.5, shootPerson.shootPersonPositionY + 2, 0);
-        glVertex3f(shootPerson.shootPersonPositionX + 0.5, shootPerson.shootPersonPositionY + 2, 0);
-        glVertex3f(shootPerson.shootPersonPositionX + 0.5, shootPerson.shootPersonPositionY - 2, 0);
+        glVertex3f(shootPerson.shootPersonPositionX + 4, shootPerson.shootPersonPositionY - 2, 0);
+        glVertex3f(shootPerson.shootPersonPositionX + 4, shootPerson.shootPersonPositionY + 2, 0);
+        glVertex3f(shootPerson.shootPersonPositionX + 5, shootPerson.shootPersonPositionY + 2, 0);
+        glVertex3f(shootPerson.shootPersonPositionX + 5, shootPerson.shootPersonPositionY - 2, 0);
         glEnd();
     }
 }

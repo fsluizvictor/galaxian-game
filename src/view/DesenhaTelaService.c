@@ -34,11 +34,23 @@ void desenhaMinhaCena()
 
     //drawStopScreen();
 
-    //TODO: fix problem with change screen
+    //TODO: fix FLAGS
 
-    if (FLAG_INIT_SCREEN)
+    if (FLAG_INIT_SCREEN == true)
     {
         drawInitScreen();
+    }
+    else if (FLAG_GAME_OVER)
+    {
+        drawGameOverScreen();
+    }
+     else if (FLAG_STOP_GAME)
+    {
+        drawStopScreen();
+    }
+    else if (FLAG_CHAMPION)
+    {
+        drawWinnerScreen();
     }
     else if (FLAG_START_GAME)
     {
@@ -49,19 +61,8 @@ void desenhaMinhaCena()
         drawShootEnemy();
         drawShootPerson();
     }
-    else if (FLAG_STOP_GAME)
-    {
-        drawStopScreen();
-    }
-    else if (FLAG_GAME_OVER)
-    {
-        drawGameOverScreen();
-    }
-    else if (countEnemies == quantityOfEnemies)
-    {
-        drawWinnerScreen();
-    }
-
+   
+    
     glFlush();
 }
 
