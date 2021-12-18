@@ -40,6 +40,18 @@ void desenhaMinhaCena()
     {
         drawInitScreen();
     }
+    else if (FLAG_GAME_OVER)
+    {
+        drawGameOverScreen();
+    }
+     else if (FLAG_STOP_GAME)
+    {
+        drawStopScreen();
+    }
+    else if (FLAG_CHAMPION)
+    {
+        drawWinnerScreen();
+    }
     else if (FLAG_START_GAME)
     {
         glClear(GL_COLOR_BUFFER_BIT);
@@ -49,19 +61,8 @@ void desenhaMinhaCena()
         drawShootEnemy();
         drawShootPerson();
     }
-    else if (FLAG_STOP_GAME)
-    {
-        drawStopScreen();
-    }
-    else if (FLAG_GAME_OVER)
-    {
-        drawGameOverScreen();
-    }
-    else if (quantityOfEnemies == 0)
-    {
-        drawWinnerScreen();
-    }
-
+   
+    
     glFlush();
 }
 

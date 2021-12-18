@@ -17,8 +17,10 @@
 #define EXIT 27
 #define ENTER 13
 #define PAUSE 'p'
-#define UNPAUSE 'u'
+#define PAUSE2 'P'
+//#define UNPAUSE 'u'
 #define RESET 'r'
+#define RESET2 'R'
 #define KEY_LEFT GLUT_KEY_LEFT
 #define KEY_RIGHT GLUT_KEY_RIGHT
 #define KEY_SPACE ' '
