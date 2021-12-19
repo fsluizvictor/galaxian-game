@@ -12,6 +12,9 @@
 #include "ShootEnemy.h"
 #include "ShootPerson.h"
 
+#include <SDL/SDL.h>
+#include <SDL/SDL_mixer.h>
+
 //----------------------------------KEYBOARD COMMAND CONFIGURATION------------------------------------
 
 #define EXIT 27
@@ -99,6 +102,9 @@ char *pathtextureWinner1 = "src/assets/winner1.png";
 char *pathtextureWinner2 = "src/assets/winner2.png";
 
 char *pathtextureStop = "src/assets/stop.png";
+
+char *pathmusicIntro = "src/assets/06_battle_in_space_intro.ogg";
+Mix_Music *intro_song = NULL;
 
 //----------------------------------WRITE CONFIGURATION------------------------------------
 
