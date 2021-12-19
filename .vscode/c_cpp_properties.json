@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/src/services"
+                "${workspaceFolder}/src/services",
+                "/usr/include/SDL"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

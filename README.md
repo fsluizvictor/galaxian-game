@@ -45,7 +45,7 @@ In this repository contais a implementatiom of game galaxian using the language 
 To compile:
 
 ```
-gcc src/controllers/Runner.c  -lGL -lglut -lGLEW -lGLU -lSOIL
+gcc src/controllers/Runner.c  -lGL -lglut -lGLEW -lGLU -lSOIL -lSDL -lSDL_mixer
 
 ```
 

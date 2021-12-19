@@ -4,10 +4,16 @@
 #include "../view/DesenhaTelaService.c"
 #include "../view/TextureView.c"
 #include "../services/GameMovementService.c"
+#include "../services/MusicService.c"
+#include "../entities/Constants.h"
 
 void execute(int argc, char **argv)
 {
     glutInit(&argc, argv);
+    //TODO: add funções música
+    inicializarMusica();
+    carregarMusica();
+    Mix_PlayMusic(intro_song,-1);
 
     glutInitContextVersion(1, 1);
     glutInitContextProfile(GLUT_COMPATIBILITY_PROFILE);
