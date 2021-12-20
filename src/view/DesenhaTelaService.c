@@ -1,6 +1,3 @@
-#include <GL/glew.h>
-#include <GL/freeglut.h>
-
 #include "../entities/Constants.h"
 
 #include "EnemiesView.c"
@@ -44,7 +41,7 @@ void desenhaMinhaCena()
     {
         drawGameOverScreen();
     }
-     else if (FLAG_STOP_GAME)
+    else if (FLAG_STOP_GAME)
     {
         drawStopScreen();
     }
@@ -61,8 +58,7 @@ void desenhaMinhaCena()
         drawShootEnemy();
         drawShootPerson();
     }
-   
-    
+
     glFlush();
 }
 

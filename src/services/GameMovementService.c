@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <GL/glew.h>
-#include <GL/freeglut.h>
-
 #include "../entities/Constants.h"
 
 #include "PersonsMovementService.c"

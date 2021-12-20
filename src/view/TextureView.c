@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <GL/glew.h>
-#include <SOIL/SOIL.h>
-#include <GL/freeglut.h>
-
 #include "../entities/Constants.h"
 
 GLuint getTexture(const char *pathFile)

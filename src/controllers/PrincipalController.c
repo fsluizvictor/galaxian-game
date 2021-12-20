@@ -1,45 +1,14 @@
-#include <GL/glew.h>
-#include <GL/freeglut.h>
-
-#include "../view/DesenhaTelaService.c"
-#include "../view/TextureView.c"
-#include "../services/GameMovementService.c"
-#include "../services/MusicService.c"
 #include "../entities/Constants.h"
+
+#include "MusicController.c"
+#include "ViewController.c"
+#include "GameMovementController.c"
 
 void execute(int argc, char **argv)
 {
     glutInit(&argc, argv);
-    //TODO: add funções música
-    inicializarMusica();
-    carregarMusica();
-    Mix_PlayMusic(intro_song,-1);
-
-    glutInitContextVersion(1, 1);
-    glutInitContextProfile(GLUT_COMPATIBILITY_PROFILE);
-
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
-    glutInitWindowSize(500, 500);
-    glutInitWindowPosition(100, 100);
-
-    //TODO: add function that create the game elements, enemies, rockets and others
+    initializeGameMusic();
     initializeGameObjects();
-
-    glutCreateWindow("GALAXIAN GAME");
-
-    glutDisplayFunc(desenhaMinhaCena);
-    glutReshapeFunc(redimensionada);
-
-    glutKeyboardFunc(keyPressed);
-
-    glutSpecialFunc(keySpecialPressed);
-    glutSpecialUpFunc(keySpecialUnpressed);
-
-    glutTimerFunc(33, refreshAll, 1);
-
-    initializeTexture();
-
-    initializeViewProperties();
-
-    glutMainLoop();
+    initializeView();
+    initializeGameMoviment();
 }

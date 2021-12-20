@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <GL/glew.h>
-#include <GL/freeglut.h>
-
 #include "../entities/Constants.h"
 
 ShootEnemy createShootEnemy(GLfloat shootEnemyPositionX,
@@ -78,7 +73,7 @@ void executeShootPerson()
             {
                 if (shootPerson.shootPersonPositionY <= LIMIT_SUPERIOR_VERTICAL_PERSON && enemiesMatrix[i][j].isAlive)
                 {
-                    
+
                     if (shootPerson.shootPersonPositionX >= enemiesMatrix[i][j].enemyPositionX - DIMENSION_ENEMIES_HORIZONTAL &&
                         shootPerson.shootPersonPositionX <= enemiesMatrix[i][j].enemyPositionX + DIMENSION_ENEMIES_HORIZONTAL)
                     {
@@ -88,7 +83,6 @@ void executeShootPerson()
                             countEnemies++;
                             enemiesMatrix[i][j].isAlive = false;
                             shootPerson.isVisible = false;
-                            
                         }
                     }
                 }
