@@ -2,6 +2,10 @@
 
 <center>Project developed for the discipline of computer graphics, in CEFET-MG. The idea of ​​the project is based on one of the first games that emerged, which was called Galaxian. In it, the player pilots a spaceship that is at the bottom of the screen and, with it, defends himself from an alien attack. The aliens carry out their attack as a large squad that moves sideways across the top of the screen. The different aliens can drop bombs against the heroic spaceship and, from time to time, they leave the formation and dive individually or in small squadrons in a more aggressive attack against the lone defender, who, in turn, also moves laterally, avoiding the bombs and firing missiles at alien invaders.<center>
  
+### Link to video:
+
+ https://www.youtube.com/watch?v=J0EzCLaiw5A
+ 
 ### Developed by:
 - Fabiana Kamo
 - Éverton Costa
